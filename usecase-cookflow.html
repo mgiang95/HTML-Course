@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Concept: Cookflow</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Standard Favicon -->
+    <link rel="icon" href="img/assets/favicon_io/favicon.ico" sizes="any" />
+    <!-- 16x16, 32x32, 48x48... -->
+
+    <!-- PNG-Icons für verschiedene Geräte und Bildschirme -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="img/assets/favicon_io/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/assets/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="img/assets/favicon_io/android-chrome-512x512.png"
+    />
+
+    <!-- Apple Touch Icon für iOS -->
+    <link
+      rel="apple-touch-icon"
+      href="img/assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/assets/favicon_io/apple-touch-icon-180x180.png"
+    />
+    <!-- Manifest für Android -->
+    <link rel="manifest" href="img/assets/favicon_io/site.webmanifest" />
+  </head>
+  <body class="case-body">
+    <!-- Zurück-Link -->
+
+    <main class="case-main">
+      <section class="case-section">
+        <!-- Hero Bild -->
+        <img
+          src="img/usecase/Cookflow-hero.jpg"
+          alt="Hero Image"
+          class="hero-image fade-in-on-scroll"
+        />
+
+        <div class="case-text">
+          <div class="navigation-links">
+            <a href="/" class="back-link fw-500 mb-xs">
+              <span class="arrow-icon-left">←</span>Back to main page
+            </a>
+            <br />
+          </div>
+          <h1 class="mb-xxs">App concept: Cookflow</h1>
+          <p class="case-subtitle mb-sm">
+            Where I built a component library from scratch
+          </p>
+          <br />
+          <div class="case-overview tapestry tapestry-3">
+            <div class="pin">📌</div>
+
+            <div class="case-overview-content">
+              <p class="mb-xxs">
+                <strong>Project: </strong>
+                University Project (Applied Prototyping in HCI)
+              </p>
+
+              <p class="mb-xxs"><strong>Duration: </strong>6 weeks</p>
+              <p><strong>Tool:</strong> Adobe XD</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Project Objective -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Project objective</h2>
+          <br />
+          <p>
+            The aim of this project was to design a borrowing and renting app
+            concept and build a component library from scratch. I envisioned a
+            platform where users could host cooking sessions, splitting the cost
+            of ingredients to fight food waste. This concept, named “Cookflow”,
+            went beyond than just feeding people—it also introduced them to new
+            recipes and cooking techniques.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/Cookflow-app.jpg"
+            alt="Cookflow app mockup"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            Cookflow is an app concept designed to host cooking sessions
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Problem statement -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Deliverables</h2>
+          <br />
+          <p class="mb-xxs">
+            To conceptualize and visualize the concept, there were several key
+            deliverables:
+          </p>
+          <ul class="styled-list">
+            <li>
+              <p>
+                <strong>Flow Map:</strong> Provide an high-level overview of the
+                entire app outlining the main features.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Low-Fidelity Prototype:</strong> Basic designs focusing
+                on structure, offering an idea of the interface.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Interactive High-Fidelity Prototype: </strong>A vertical
+                prototype expanding on the main features, showcasing full
+                functionality in a detailed, visually polished design.
+              </p>
+            </li>
+          </ul>
+          <br />
+          <p>
+            In the next sections, I want to get into more detail on how I set up
+            my component library, the transition to high-fidelity prototype and
+            the resulting challenges of this process.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/Cookflow-vertical_prototype.jpg"
+            alt="Vertical prototype"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            The vertical prototype showcases the main features in a detailed,
+            visually polished design
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Low-fidelity wireframes -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Low-fidelity wireframes and component library setup</h2>
+          <br />
+          <p>
+            During the stage of low-fidelity prototyping, I decided to create a
+            component library using Adobe XD’s linked file system. This approach
+            allowed for quick updates to core UI elements across different
+            screens and design files. The atomic design methodology from
+            <a
+              class="link-text-inline"
+              href="https://atomicdesign.bradfrost.com/chapter-2/"
+              >Brad Frost</a
+            >
+            was applied, which helped break down the UI into small, reusable
+            components and assets, ensuring consistency across the design.
+          </p>
+          <br />
+          <p>
+            Building a modular system is time-saving when there is a plenty
+            amount of repetitive elements and screens involved. However,
+            depending on the fidelity it also brought challenges, especially in
+            the beginning when the speed of developing variations was affected.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/Cookflow-lowfi.jpg"
+            alt="Modularization"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            Creating a reusable component library improved design consistency
+            but introduced challenges in composition, slowing variation
+            development
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Transition to HiFi -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Transition to high-fidelity wireframes</h2>
+          <br />
+          <p>
+            With the basic structure in place, I moved to high-fidelity
+            wireframes, refining visual elements like font sizes, color schemes,
+            and hierarchy. Using nested components ensured consistent assets
+            across screens to systematize properties like padding and margins.
+          </p>
+          <br />
+          <p>
+            While nested components streamlined iterations, they introduced
+            complexity and performance issues, slowing the design process due to
+            increased file size and layer count. The layered structure of these
+            components ultimately slowed down the design process, revealing the
+            trade-off between flexibility and efficiency.
+          </p>
+
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/Cookflow-component_creation.jpg"
+            alt="Performance issues"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            The layered structure of components increased file size and slowed
+            down the design process
+          </figcaption>
+        </figure>
+
+        <div class="case-text">
+          <p>
+            In refining the design language, I was confronted with conflicts in
+            the visual hierarchy, e.g. in determining suitable font sizes and
+            creating a uniform color harmony. Early on, I had not fully
+            considered how various elements, such as list items, cards, and
+            overlays, would interact visually. This resulted in misaligned
+            visual hierarchies, requiring further iteration to balance the
+            design.
+          </p>
+          <br />
+          <p>
+            To address this, I drew inspiration from
+            <a
+              class="link-text-inline"
+              href="https://m2.material.io/design/environment/elevation.html#elevation-in-material-design"
+              >Google Material Design</a
+            >, creating a system that used z-index elevation levels paired with
+            a fine-tuned color gradient to better reflect layer hierarchy.
+          </p>
+
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/Cookflow-elevation.jpg"
+            alt="Elevation system"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            Misaligned hierarchies were resolved by implementing an elevation
+            system inspired by Google Material Design, using z-index levels and
+            gradient adjustments
+          </figcaption>
+        </figure>
+        <div class="case-text">
+          <p>
+            Additionally, technical challenges arose due to Adobe XD’s
+            performance, especially when dealing with a large number of
+            artboards, links, auto-animate functions, and layer count (as
+            mentioned before). Crashes and lost interaction links were frequent,
+            slowing down the prototyping process.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/Cookflow-performance_issues.jpg"
+            alt="Performance issues"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            The amount of artboards, links, and auto-animate functions in a
+            single file slowed down performance
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Outcome -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Outcome</h2>
+          <br />
+          <p>
+            This project taught me valuable lessons about the importance of
+            structured design processes. Setting up a design system from
+            scratch, while time-consuming, proved to be extremely beneficial
+            during later stages of the project. Despite technical challenges
+            with Adobe XD, the modular system I created allowed retrospectively
+            for flexibility and scalability, laying the methodical groundwork
+            for future design projects.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/Cookflow-hifi-mosaic.jpg"
+            alt="High-Fidelity Mosaic"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            The modular system allowed for flexibility and scalability across
+            different screens
+          </figcaption>
+        </figure>
+      </section>
+      <!-- Reflection -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Reflection</h2>
+          <br />
+          <p class="mb-xxs">
+            Coming from a background in Photoshop for UI design (yes that was a
+            thing if you design for fixed hardware display layouts), this
+            required a shift in my design approach.
+          </p>
+          <ul class="styled-list">
+            <li>
+              <p>
+                Learning how to efficiently componentize elements was a steep
+                learning curve. Especially as I transitioned from low-fidelity
+                to high-fidelity screens. Establishing a component library
+                allowed for quick changes across the screens. However, it became
+                clear that an atomic design approach could have been implemented
+                later in the process to avoid early complexity and to gain
+                velocity (or at least the fidelity of the design components
+                could’ve been reduced).
+              </p>
+            </li>
+            <li>
+              <p>
+                Transitioning from low-fidelity to high-fidelity screens
+                required careful attention to detail, especially in terms of
+                maintaining consistency in visual elements. Setting up a solid
+                foundation for font sizes and color schemes earlier in the
+                process would have saved effort in the later stages.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="case-text">
+          <div class="navigation-links">
+            <a href="/" class="back-link fw-500">
+              <span class="arrow-icon-left">←</span>Back to main page
+            </a>
+          </div>
+          <footer class="case-footer">
+            <p>Copyright © 2024 Michael Giang. All Rights Reserved.</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

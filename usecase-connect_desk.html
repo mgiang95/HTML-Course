@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case: connect:desk</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Standard Favicon -->
+    <link rel="icon" href="img/assets/favicon_io/favicon.ico" sizes="any" />
+    <!-- 16x16, 32x32, 48x48... -->
+
+    <!-- PNG-Icons für verschiedene Geräte und Bildschirme -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="img/assets/favicon_io/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/assets/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="img/assets/favicon_io/android-chrome-512x512.png"
+    />
+
+    <!-- Apple Touch Icon für iOS -->
+    <link
+      rel="apple-touch-icon"
+      href="img/assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/assets/favicon_io/apple-touch-icon-180x180.png"
+    />
+    <!-- Manifest für Android -->
+    <link rel="manifest" href="img/assets/favicon_io/site.webmanifest" />
+  </head>
+  <body class="case-body">
+    <!-- Zurück-Link -->
+
+    <main class="case-main">
+      <section class="case-section">
+        <!-- Hero Bild -->
+        <img
+          src="img/usecase/connect_desk-hero.jpg"
+          alt="Hero Image"
+          class="hero-image fade-in-on-scroll"
+        />
+
+        <div class="case-text">
+          <div class="navigation-links">
+            <a href="/" class="back-link fw-500 mb-xs">
+              <span class="arrow-icon-left">←</span>Back to main page
+            </a>
+            <br />
+          </div>
+          <h1 class="mb-xxs">connect:desk</h1>
+          <p class="case-subtitle mb-sm">Where I maintained a design system</p>
+          <br />
+          <div class="case-overview tapestry tapestry-2">
+            <div class="pin">📌</div>
+
+            <div class="case-overview-content">
+              <p class="mb-xxs">
+                <strong>Project:</strong>
+                <a
+                  class="link-button"
+                  target="_blank"
+                  href="https://www.linde-mh.ch/de_ch/Loesungen/Flottenmanagement/connect-desk/#"
+                  >connect:desk - A fleet management tool<span
+                    class="arrow-icon-top-right"
+                    >↗</span
+                  ></a
+                >
+              </p>
+
+              <p class="mb-xxs"><strong>Role: </strong>Interaction designer</p>
+              <p><strong>Year:</strong> 2018&nbsp;–&nbsp;2020</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Project Summary -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Project Summary</h2>
+          <br />
+          <p>
+            Linde Material Handling GmbH, a leading industrial truck
+            manufacturer, offers <em>connect:desk</em> as complementing software
+            tool. It provides overview in managing and analyzing data from
+            connected industrial trucks. This enables features like accident
+            detection, usage data and further detailed reports on vehicle
+            performance.
+          </p>
+          <br />
+          <p>
+            I worked alongside a multidisciplinary team (with 4 designers, 5
+            developers, a product owner and a technical translator) to enhance
+            the software’s usability and functionality, contributing to new
+            feature development and a UI facelift while maintaining the
+            component library.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/connect_desk-dashboard.jpg"
+            alt="connect:desk Dashboard"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            connect:desk provides overview in managing and analyzing data from
+            connected industrial trucks with features such as the dashboard
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Problem statement -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Problem statement and contribution</h2>
+          <br />
+          <p>
+            Initially intended as an integrated system with a specific, limited
+            use case in mind, connect:desk experienced feature bloat over time.
+            New features and reports were necessary due to emerging technologies
+            such as electric engines or fuel cell forklifts. However, customers
+            spanned across small warehouses to large international organisations
+            had different requirements. Therefore a rigid software lead to a
+            cluttered UI with unnecessary complexity and performance issues.
+          </p>
+          <br />
+          <p class="mb-xxs">Our design team tackled this by:</p>
+          <ul class="styled-list">
+            <li>
+              <p>Conceptualizing new modularization features</p>
+            </li>
+            <li>
+              <p>Updating the UI</p>
+            </li>
+            <li>
+              <p>Maintaining the design system</p>
+            </li>
+          </ul>
+        </div>
+        <figure>
+          <img
+            src="img/usecase/connect_desk-feature_bloat.jpg"
+            alt="Feature bloat"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            Feature bloat led to a cluttered UI, causing issues due to
+            insufficient space for new features and reports
+          </figcaption>
+        </figure>
+      </section>
+      <!-- Modularization -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Modularizing the software</h2>
+          <br />
+          <p>
+            As the software evolved, modularization became a key feature,
+            enabling users to pick specific functions based on their individual
+            needs. This approach improved usability by reducing UI clutter and
+            tailoring the platform to client-specific requirements.
+          </p>
+          <br />
+          <p>
+            Implementing modularization required careful planning to map out
+            cross-dependencies, ensuring that changes in one module did not
+            negatively affect others. Users could manage these modules through
+            their account settings, but since this was also a process with
+            sensitive dependencies, access was restricted by an additional
+            permission system to prevent unauthorized adjustments.
+          </p>
+          <br />
+          <p>
+            The development of this approach also involved close collaboration
+            with the development team. It was crucial to update the component
+            library regularly and maintain system stability across the platform,
+            ensuring that new or modified features integrated seamlessly with
+            existing ones.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/connect_desk-modules.jpg"
+            alt="Modularization"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            Modularization enabled toggling features, ensuring usability and
+            stability through careful dependency and permissions mapping
+          </figcaption>
+        </figure>
+      </section>
+      <!-- Zone Control -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Introducing zone control</h2>
+          <br />
+          <p>
+            A huge addition to the software was the introduction of the zone
+            control feature. Physical transmitters are placed in the warehouse
+            allowing users to define specific geo-fences where automatic rules
+            like speed regulations could be applied to vehicles.
+          </p>
+          <br />
+          <p>
+            This feature required new UI elements, such as draggable radii for
+            adjusting zone sizes and map navigation tools. After several
+            briefings with the engineering team, we designed these elements,
+            drawing inspiration from map tools like OpenStreetMap and canvas
+            based tools like Illustrator and Sketch. We created a concept where
+            users could place anchors on the UI, representing the transmitters
+            in the warehouse. These anchors can be grouped to apply rules such
+            as speed limits or lift height restrictions.
+          </p>
+          <br />
+          <p>
+            Challenges arose due to different input methods and workflow
+            integration. The internal engineering tool allowed quick, flexible
+            changes. In contrast, connect:desk required a more rigid approach,
+            with inputs validated in an editing mask before saving. It is
+            necessary to consider, that setting up anchors in the warehouse and
+            mapping them in the UI is sensitive work, typically done by service
+            technicians. Also, rules mostly stay unchanged, thus an additional
+            control layer to prevent modifications by accident. Our focus with
+            this concept was on balancing flexibility with reliability, making
+            sure the UI was both intuitive and secure for various user needs.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/connect_desk-zones.jpg"
+            alt="Zone control"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            The feature required new UI elements, such as draggable radii for
+            adjusting zone sizes and map navigation tools
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Facelift -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Modernizing UI and component library</h2>
+          <br />
+          <p>
+            As part of the connect:desk redesign, our team focused on
+            modernizing the UI, originally released in 2012 where skeuomorphism
+            was still broadly represented. With stacking features and newly
+            introduced UI elements, we faced performance issues, especially for
+            clients managing larger fleets. To tackle this, we streamlined our
+            component library, collaborating closely with the development team
+            to ensure all updates aligned with evolving design requirements.
+          </p>
+          <br />
+          <p>
+            We explored several design variants, from minimal tweaks to more
+            radical facelifts. Ultimately, we chose a minimal approach,
+            retaining the existing information architecture and focusing on
+            interchangeable icons and subtle color adjustments, especially given
+            the constraints of JavaFX. Key UI elements like buttons, input
+            fields, and the app frame were updated, leading to better
+            performance, particularly through modularization.
+          </p>
+          <br />
+          <p>
+            Removing skeuomorphism and transitioning to a cleaner, more modern
+            design required us to adjust the component library which followed
+            <a
+              class="link-text-inline"
+              href="https://atomicdesign.bradfrost.com/chapter-2/"
+              >Brad Frost’s Atomic Design methodology</a
+            >. During the process, we encountered challenges such as naming
+            conventions, which were resolved through close collaboration with
+            developers, aligning mental models and ensuring consistency in the
+            final components. Clear communication with the development team
+            ensured smooth implementation throughout the process.
+          </p>
+          <br />
+        </div>
+        <figure>
+          <img
+            src="img/usecase/connect_desk-isometric.jpg"
+            alt="Isometric view"
+            class="case-image fade-in-on-scroll"
+          />
+          <figcaption>
+            The facelift removed skeuomorphic patterns and transitioned to a
+            cleaner, more modern design
+          </figcaption>
+        </figure>
+      </section>
+      <!-- Reflection -->
+      <section class="case-section">
+        <div class="case-text">
+          <h2>Reflection</h2>
+          <br />
+          <p>
+            Being part of a skilled design team with well-established processes
+            allowed me to learn key project metrics and experience the value of
+            multidisciplinary collaboration. Over time, we developed best
+            practices, which were made easier through methods like Photoshop
+            scripts. The experience highlighted the importance of collaboration
+            and keeping a flexible design system, grounded in Brad Frost’s
+            atomic design, to manage scalability and changes during the product
+            life cylce.
+          </p>
+        </div>
+      </section>
+
+      <!-- Shoutout -->
+      <section class="case-section mb-xs">
+        <div class="case-text">
+          <h2>Shoutout</h2>
+          <br />
+          <p>
+            I want to thank the connect:desk team for this amazing journey.
+            Marcel Münchow, Kai Tomala, and Kim Heller challenged me daily to
+            push my design skills to the boundries and expand my knowledge of
+            the tools, all while considering every aspect beyond just the visual
+            elements.
+          </p>
+        </div>
+      </section>
+      <section class="case-section">
+        <div class="case-text">
+          <div class="navigation-links">
+            <a href="/" class="back-link fw-500">
+              <span class="arrow-icon-left">←</span>Back to main page
+            </a>
+          </div>
+          <footer class="case-footer">
+            <p>Copyright © 2024 Michael Giang. All Rights Reserved.</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
