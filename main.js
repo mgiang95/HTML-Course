@@ -1,3 +1,33 @@
+////// Backlink
+// URL-Parameter auslesen
+const params = new URLSearchParams(window.location.search);
+const ref = params.get("ref");
+
+// Alle Backlinks mit der Klasse "back-link" abrufen
+const backLinks = document.querySelectorAll(".back-link");
+
+// Dynamische Logik auf jeden Backlink anwenden
+backLinks.forEach((backLink) => {
+  // Prüfen, ob der Link ein spezifisches href (Hardlink) hat
+  if (backLink.href && !backLink.getAttribute("href").startsWith("#")) {
+    console.log("Hardlink gefunden: " + backLink.href); // Hardlink bleibt unverändert
+  } else {
+    // Dynamischen Link erstellen
+    const referrer = document.referrer; // Dynamische Referenz auf die vorherige Seite
+
+    if (ref && referrer) {
+      // Zurück zur vorherigen Seite mit der richtigen Section-ID
+      backLink.href = `${referrer.split("#")[0]}#${ref}`;
+    } else if (referrer) {
+      // Nur zur vorherigen Seite zurück (ohne Section-ID)
+      backLink.href = referrer;
+    } else {
+      // Fallback: Falls keine Referrer-Information vorhanden ist
+      backLink.href = "index.html";
+    }
+  }
+});
+
 ////// Dropdown-Toggle-Funktion
 function toggleDropdown(element) {
   const dropdown = element.parentElement;
@@ -57,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.2 }
   );
 
   fadeElements.forEach((element) => generalObserver.observe(element));
@@ -65,17 +95,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ////// Card Project Hover FX
 // Wähle alle .card-project-Elemente aus
-const cardProjects = document.querySelectorAll(".card-project");
+// const cardProjects = document.querySelectorAll(".card-project");
 
-// Durchlaufe jedes Element und füge die Events hinzu
-cardProjects.forEach((cardProject) => {
-  const tapestry = cardProject.closest(".tapestry");
+// // Durchlaufe jedes Element und füge die Events hinzu
+// cardProjects.forEach((cardProject) => {
+//   const tapestry = cardProject.closest(".tapestry");
 
-  cardProject.addEventListener("mouseover", () => {
-    tapestry.classList.add("hovered");
-  });
+//   cardProject.addEventListener("mouseover", () => {
+//     tapestry.classList.add("hovered");
+//   });
 
-  cardProject.addEventListener("mouseleave", () => {
-    tapestry.classList.remove("hovered");
-  });
-});
+//   cardProject.addEventListener("mouseleave", () => {
+//     tapestry.classList.remove("hovered");
+//   });
+// });
+
+function copyToClipboard() {
+  const email = "m.giang@hotmail.de";
+  navigator.clipboard.writeText(email).then(
+    () => {
+      alert("Email copied to clipboard :)");
+    },
+    (err) => {
+      console.error("Error copying email: ", err);
+    }
+  );
+}

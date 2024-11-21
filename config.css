@@ -3,26 +3,6 @@
 :root {
   /*----------------- Base Colors -----------------*/
 
-  --primary-00: #f7f9fc;
-  --primary-01: #e9eef7;
-  --primary-02: #e1e9f5;
-  --primary-03: #dae4f2;
-  --primary-04: #d3def0;
-  --primary-05: #ccd9ed;
-  --primary-06: #c5d4eb;
-  --primary-07: #bdcee8;
-  --primary-08: #b6c9e6;
-  --primary-09: #afc4e3;
-  --primary-10: #9cafcc;
-  --primary-11: #8a9bb5;
-  --primary-12: #77869e;
-  --primary-13: #647287;
-  --primary-14: #515d6f;
-  --primary-15: #3f4958;
-  --primary-16: #2c3441;
-  --primary-17: #19202a;
-  --primary-18: #070c13;
-
   /* Primary*/
   --primary-0: var(--blue-0);
   --primary-10: var(--blue-10);
@@ -32,7 +12,9 @@
   --primary-50: var(--blue-50);
   --primary-60: var(--blue-60);
   --primary-70: var(--blue-70);
+  --primary-76: var(--blue-76);
   --primary-80: var(--blue-80);
+  --primary-87: var(--blue-87);
   --primary-88: var(--blue-88);
   --primary-90: var(--blue-90);
   --primary-95: var(--blue-95);
@@ -45,7 +27,9 @@
   --blue-95: #e8f2fc;
   --blue-90: #d2e5f9;
   --blue-88: #c9e0f8;
+  --blue-87: #c4def8;
   --blue-80: #a4ccf4;
+  --blue-76: #92c2f1;
   --blue-70: #77b2ee;
   --blue-60: #4a99e8;
   --blue-50: #1c80e3;
@@ -134,7 +118,7 @@
   --text-color: var(--primary-10);
   --text-muted: var(--gray-50);
 
-  --highlight: var(--primary-50);
+  --highlight: #0674e2;
 
   /* Component Colors */
   --keyword-text: var(--primary-10);
@@ -143,9 +127,9 @@
   --scrollbar-thumb: var(--primary-20);
   --scrollbar-track: var(--primary-90);
 
-  --button-primary-bg-normal: var(--primary-50);
-  --button-primary-bg-hover: var(--primary-60);
-  --button-primary-text: var(--primary-95);
+  --button-primary-bg-normal: var(--primary-80);
+  --button-primary-bg-hover: var(--primary-76);
+  --button-primary-text: var(--primary-10);
 
   --indicator-default: var(--gray-90);
 
@@ -155,13 +139,13 @@
   --card-bg: var(--primary-90);
   --card-bg-hover: var(--primary-88);
   /* Umgewandelter RGB-Wert */
-  --card-bg-rgb: 210, 229, 249;
+  --body-bg-rgb: 210, 229, 249;
   /* --card-bg-sm: var(--primary-03);
   --card-bg-sm-rgb: 218, 228, 242; */
-  --card-bg-alpha-none: rgba(var(--card-bg-rgb), 1);
-  --card-bg-alpha-full: rgba(var(--card-bg-rgb), 0);
-  --card-border: var(--primary-05);
-  --card-border-hover: var(--primary-02);
+  /* --body-bg-alpha-none: rgba(var(--card-bg-rgb), 1);
+  --body-bg-alpha-full: rgba(var(--card-bg-rgb), 0); */
+  --body-border: var(--primary-05);
+  --body-border-hover: var(--primary-02);
 
   --divider: var(--primary-80);
 
@@ -229,21 +213,33 @@
   --space-tile-padding: clamp(1rem, 0.8182rem + 0.9091vw, 1.5rem);
 
   /* Border Radius */
-  --border-radius: clamp(1rem, 0.3182rem + 0.9091vw, 2rem);
+  --border-radius: 1rem;
   --border-radius-inner: calc(var(--border-radius) * 0.75);
 
   /* Shadows */
   /* Definiere die Haupt-Schattenfarbe */
-  --shadow-color: 11, 51, 91;
+  --shadow-color: 1, 5, 9;
 
-  --box-shadow-sm: 0px 3px 6px 1px rgba(var(--shadow-color), 0.25);
-  --box-shadow-sm-hover: 0px 3px 6px 1px rgba(var(--shadow-color), 0.2);
+  --box-shadow-sm: 0 1px 3px 0 rgba(var(--shadow-color), 0.2);
+  --box-shadow-sm-hover: 0 1px 3px 0 rgba(var(--shadow-color), 0.2);
 
-  --box-shadow-md: 0px 10px 12px 0px rgba(var(--shadow-color), 0.18);
-  --box-shadow-md-hover: 0px 10px 12px 0px rgba(var(--shadow-color), 0.14);
+  --box-shadow-md: 0 4px 6px -1px rgba(var(--shadow-color), 0.1);
+  --box-shadow-md-hover: 0 4px 6px -1px rgba(var(--shadow-color), 0.06);
 
-  --box-shadow-lg: 0px 6px 16px 8px rgba(var(--shadow-color), 0.2);
-  --box-shadow-lg-hover: 0px 6px 16px 8px rgba(var(--shadow-color), 0.16);
+  --box-shadow-lg: 0 8px 10px -3px rgba(var(--shadow-color), 0.1);
+  --box-shadow-lg-hover: 0 8px 10px -3px rgba(var(--shadow-color), 0.14);
+  /* 
+  --box-shadow-sm: 0 1px 2px 0 rgb(var(--shadow-color) / 0.05);
+  --shadow: 0 1px 3px 0 rgb(var(--shadow-color) / 0.1),
+    0 1px 2px -1px rgb(var(--shadow-color) / 0.1);
+  --box-shadow-md: 0 4px 6px -1px rgb(var(--shadow-color) / 0.1),
+    0 2px 4px -2px rgb(var(--shadow-color) / 0.1);
+  --box-shadow-lg: 0 10px 15px -3px rgb(var(--shadow-color) / 0.1),
+    0 4px 6px -4px rgb(var(--shadow-color) / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(var(--shadow-color) / 0.1),
+    0 8px 10px -6px rgb(var(--shadow-color) / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(var(--shadow-color) / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(var(--shadow-color) / 0.05); */
 
   /*----------------- Spacing classes -----------------*/
 
@@ -264,6 +260,9 @@
 
   .mb-lg {
     margin-bottom: var(--space-lg);
+  }
+  .mb-xl {
+    margin-bottom: var(--space-xl);
   }
 
   .ml-xs {
@@ -287,5 +286,9 @@
 
   .text-muted {
     color: var(--text-muted);
+  }
+
+  .it {
+    font-style: italic;
   }
 }
