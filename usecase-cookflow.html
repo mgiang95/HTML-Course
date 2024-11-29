@@ -206,9 +206,8 @@
             class="case-image fade-in-on-scroll"
           />
           <figcaption>
-            Creating a reusable component library improved design consistency
-            but introduced challenges in composition, slowing variation
-            development
+            Creating a reusable component library early introduced challenges in
+            composition, slowing down design variations
           </figcaption>
         </figure>
       </section>
@@ -283,27 +282,6 @@
             gradient adjustments
           </figcaption>
         </figure>
-        <div class="case-text">
-          <p>
-            Additionally, technical challenges arose due to Adobe XD’s
-            performance, especially when dealing with a large number of
-            artboards, links, auto-animate functions, and layer count (as
-            mentioned before). Crashes and lost interaction links were frequent,
-            slowing down the prototyping process.
-          </p>
-          <br />
-        </div>
-        <figure>
-          <img
-            src="img/usecase/Cookflow-performance_issues.jpg"
-            alt="Performance issues"
-            class="case-image fade-in-on-scroll"
-          />
-          <figcaption>
-            The amount of artboards, links, and auto-animate functions in a
-            single file slowed down performance
-          </figcaption>
-        </figure>
       </section>
 
       <!-- Outcome -->
@@ -334,33 +312,28 @@
           </figcaption>
         </figure>
       </section>
-      <!-- Reflection -->
+      <!-- Lessons Learned -->
       <section class="case-section">
         <div class="case-text">
-          <h2>Reflection</h2>
+          <h2>Lessons learned</h2>
           <br />
           <p class="mb-xxs">
             Coming from a background in Photoshop for UI design (yes that was a
             thing if you design for fixed hardware display layouts), this
-            required a shift in my design approach.
+            required a shift in my design approach:
           </p>
           <ul class="styled-list">
             <li>
               <p>
-                Learning how to efficiently componentize elements was a steep
-                learning curve. Establishng a component library allowed for
-                quick changes across the screens. However, it became clear that
-                an atomic design approach could have been implemented later in
-                the process to avoid early complexity (or at least the fidelity
-                of the design components could’ve been reduced).
+                Avoid early complexity in component composition in order to
+                focus on variations in design exploration.
               </p>
             </li>
             <li>
               <p>
-                Transitioning from low-fidelity to high-fidelity screens
-                required careful attention to detail. Setting up a solid
-                foundation for font sizes and color schemes earlier in the
-                process would have saved effort in the later stages.
+                Setting up a solid foundation for font sizes and color schemes
+                early in the process is important to transition from
+                low-fidelity to high-fidelity screens.
               </p>
             </li>
           </ul>
@@ -441,10 +414,22 @@
       <section class="case-section">
         <div class="case-text">
           <div class="navigation-links">
-            <a href="index.html#projects" class="back-link fw-500 mb-xs">
+            <a
+              id="back-link"
+              href="index.html#projects"
+              class="back-link fw-500 mb-xs"
+            >
               <span class="arrow-icon-left">←</span>Back to previous page
             </a>
-            <br />
+            <a
+              id="next-usecase-link"
+              href="usecase-bni.html"
+              class="next-link fw-500 mb-xs"
+            >
+              Read next use case: WinCredit 3<span class="arrow-icon-right"
+                >→</span
+              >
+            </a>
           </div>
           <footer class="case-footer">
             <p>Copyright © 2024 Michael Giang. All Rights Reserved.</p>

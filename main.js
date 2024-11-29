@@ -1,7 +1,14 @@
-////// Backlink
-// URL-Parameter auslesen
+// Backlink-Handling
 const params = new URLSearchParams(window.location.search);
 const ref = params.get("ref");
+
+// Hauptreferenz: Initial speichern, wenn die Seite von der Hauptseite aus geöffnet wird
+if (!sessionStorage.getItem("mainRef")) {
+  sessionStorage.setItem("mainRef", document.referrer || "index.html");
+}
+
+// Hauptreferenz aus SessionStorage abrufen
+const mainRef = sessionStorage.getItem("mainRef");
 
 // Alle Backlinks mit der Klasse "back-link" abrufen
 const backLinks = document.querySelectorAll(".back-link");
@@ -13,17 +20,12 @@ backLinks.forEach((backLink) => {
     console.log("Hardlink gefunden: " + backLink.href); // Hardlink bleibt unverändert
   } else {
     // Dynamischen Link erstellen
-    const referrer = document.referrer; // Dynamische Referenz auf die vorherige Seite
-
-    if (ref && referrer) {
-      // Zurück zur vorherigen Seite mit der richtigen Section-ID
-      backLink.href = `${referrer.split("#")[0]}#${ref}`;
-    } else if (referrer) {
-      // Nur zur vorherigen Seite zurück (ohne Section-ID)
-      backLink.href = referrer;
+    if (ref) {
+      // Zurück zur Hauptreferenz mit der richtigen Section-ID
+      backLink.href = `${mainRef.split("#")[0]}#${ref}`;
     } else {
-      // Fallback: Falls keine Referrer-Information vorhanden ist
-      backLink.href = "index.html";
+      // Zurück zur Hauptreferenz (ohne Section-ID)
+      backLink.href = mainRef;
     }
   }
 });

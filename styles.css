@@ -1507,13 +1507,16 @@ section {
 
 /*--------- Use Case ---------*/
 
-/* Back-Link and Scroll to Top */
+/* Back-Link, Next-Link and Scroll to Top */
 .navigation-links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
 
-.back-link {
+.back-link,
+.next-link {
   text-decoration: none;
   color: var(--text-muted);
   display: inline-flex;
@@ -1522,11 +1525,13 @@ section {
   padding: 0.75rem 0;
 }
 
-.back-link:hover {
+.back-link:hover,
+.next-link:hover {
   color: var(--highlight);
 }
 
-.arrow-icon-left {
+.arrow-icon-left,
+.arrow-icon-right {
   display: inline-block;
   margin-right: 4px; /* Abstand zwischen Pfeil und Text */
   transition: transform 0.15s ease;
@@ -1534,6 +1539,10 @@ section {
 
 .back-link:hover .arrow-icon-left {
   transform: translate(-3px, 0); /* Animation des Pfeils nach links */
+}
+
+.next-link:hover .arrow-icon-right {
+  transform: translate(3px, 0); /* Animation des Pfeils nach rechts */
 }
 
 /* Basis-Layout */
