@@ -1425,17 +1425,32 @@ section {
 /* Container für die gesamte Sektion */
 .contact-container {
   display: flex;
-  gap: 1rem; /* Abstand zwischen den Flex-Elementen */
-  width: 100%; /* Setzt die Breite auf 100% der übergeordneten Fläche */
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%; /* Stelle sicher, dass die Breite auf 100% begrenzt ist */
   margin: var(--space-md) 0;
-  box-sizing: border-box; /* Verhindert, dass Padding und Gap die Gesamtbreite erhöhen */
+  box-sizing: border-box;
+  overflow: hidden; /* Verhindert das Überlaufen des Containers */
+}
+
+@media (max-width: 767px) {
+  .contact-container {
+    flex-direction: column; /* Wechsle die Richtung der Flexbox auf Spaltenlayout */
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .email-section,
+  .other-links {
+    flex: 1 1 100%; /* Beide Bereiche nehmen den gesamten Platz ein */
+  }
 }
 
 /* Email-Bereich: 2/3 des Platzes */
 .email-section {
   flex: 2;
   background-color: var(--card-bg);
-  padding: 1.3rem;
+  padding: 1.5rem;
   border-radius: var(--border-radius);
   display: flex;
   align-items: flex-start; /* Button nicht auf volle Breite strecken */
